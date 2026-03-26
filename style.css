@@ -1,0 +1,127 @@
+/* Общие настройки страницы */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Чат прижат к ПРАВОМУ краю */
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #87ceeb; /* Твой небесно-голубой фон */
+}
+
+/* Главный контейнер чата (Белое окно) */
+#main-container {
+    display: flex;
+    width: 75%; /* Занимает 3/4 экрана */
+    height: 85vh; 
+    background: white;
+    margin-right: 50px; /* Отступ от правого края */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Колонка для контактов (слева в чате) */
+#contacts {
+    width: 250px;
+    background: #f8f9fa;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
+
+/* Правая часть чата */
+#chat-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#chat {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Сообщения в чате */
+#chat p {
+    margin: 5px 0;
+    padding: 8px 12px;
+    background: #e9ecef;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 80%;
+}
+
+/* Область ввода */
+#input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover { background-color: #0056b3; }
+
+/* --- ОКНО ВХОДА (OVERLAY) --- */
+#login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Затемнение */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Поверх всего */
+}
+
+#login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 320px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+#login-box input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#main-auth-btn {
+    background-color: #28a745; /* Зеленая для входа */
+}
+
+#main-auth-btn:hover { background-color: #218838; }
+
+#toggle-text {
+    font-size: 14px;
+    margin-top: 10px;
+}

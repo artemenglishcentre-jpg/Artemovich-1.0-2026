@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мессенджер Артемович</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-overlay">
+        <div id="login-box">
+            <h2 id="auth-title">Вход</h2>
+            
+            <div id="reg-fields">
+                <input type="text" id="reg-first-name" placeholder="Имя">
+                <input type="text" id="reg-last-name" placeholder="Фамилия">
+            </div>
+
+            <input type="password" id="auth-pass" placeholder="Пароль">
+            <button id="main-auth-btn">Войти</button>
+
+            <p id="toggle-text">Нет аккаунта? <span id="toggle-link" style="color: blue; cursor: pointer; text-decoration: underline;">Зарегистрироваться</span></p>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div id="contacts">
+            <p><b>Артемович Чат</b></p>
+        </div>
+        <div id="chat-wrapper">
+            <div id="chat"></div>
+            <div id="input-area">
+                <input type="text" id="message-input" placeholder="Напиши сообщение...">
+                <button id="send-msg-btn">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
